@@ -197,16 +197,19 @@ def player_stats(player_name)
   player_hash = game_hash
   player_hash.reduce({}) do |memo, (team,team_info)|
     team_info[:players].each do |indiv_player|
-      indiv_player.reduce({}) do |new_memo, (category, characteristic)|
-        if !category == :player_name
+      if indiv_player[:player_name] == player_name
+        indiv_player.reduce({}) do |new_memo, (category, characteristic)|
           result[category] = characteristic
         end
       end
-      
-    end
+    end 
   end
   result
 end
+#need to interate through the players into and create a new hash 
+#how do we get to that player hash when given a player name? 
+#need to go through each team --> players --> see if the name matches the argument 
+#then iterate through the players info
 
 
 
