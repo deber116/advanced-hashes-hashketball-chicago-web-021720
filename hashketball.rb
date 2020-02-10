@@ -250,6 +250,7 @@ def winning_team
     end 
     if score > highest_score
       winner = team_info[:team_name]
+      highest_score = score
     end
   end
   winner
