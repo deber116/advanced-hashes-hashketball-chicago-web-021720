@@ -209,7 +209,19 @@ def player_stats(player_name)
   result
 end
 
-
+def big_shoe_rebound
+  rebounds = nil
+  largest_shoe = nil
+  player_hash = game_hash
+  player_hash.reduce({}) do |memo, (team,team_info)|
+    team_info[:players].each do |indiv_player|
+      if indiv_player[:player_name] == player_name
+        
+      end
+    end 
+  end
+  result
+end
 
 
 
