@@ -211,12 +211,12 @@ end
 
 def big_shoe_rebound
   rebounds = nil
-  largest_shoe = nil
+  largest_shoe = 0
   player_hash = game_hash
   player_hash.reduce({}) do |memo, (team,team_info)|
     team_info[:players].each do |indiv_player|
-      if indiv_player[:player_name] == player_name
-        
+      if indiv_player[:shoe] > largest_shoe
+        rebounds = indiv_player[:rebounds]
       end
     end 
   end
