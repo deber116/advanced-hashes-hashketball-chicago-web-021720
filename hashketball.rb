@@ -244,14 +244,15 @@ def winning_team
   highest_score = 0
   player_hash = game_hash
   player_hash.reduce({}) do |memo, (team,team_info)|
+    score = 0
     team_info[:players].each do |indiv_player|
-      if indiv_player[:points] > highest_score
-        highest_score = indiv_player[:points]
-        highest_player = indiv_player[:player_name]
-      end
+      score += indiv_player[:points]
     end 
+    if score > highest_score
+      winner = team_info[:team_name]
+    end
   end
-  highest_player
+  winner
 end
 
 
