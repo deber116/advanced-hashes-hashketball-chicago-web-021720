@@ -191,9 +191,10 @@ def player_numbers(team_name)
   end
   result
 end
-#take the team name iterate through the players numbers and << them into an Array
 
-
+def player_stats(player_name)
+  
+end
 
 
 
