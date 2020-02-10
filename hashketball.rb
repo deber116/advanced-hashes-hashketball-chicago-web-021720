@@ -273,7 +273,13 @@ end
 
 def long_name_steals_a_ton?
   longest_player = player_with_longest_name
-  
+  longest_player_steals = nil
+  player_hash = game_hash
+  player_hash.reduce({}) do |memo, (team,team_info)|
+    team_info[:players].each do |indiv_player|
+      
+    end
+  end
 end
 
 
