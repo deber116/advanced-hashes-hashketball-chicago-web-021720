@@ -198,7 +198,9 @@ def player_stats(player_name)
   player_hash.reduce({}) do |memo, (team,team_info)|
     team_info[:players].each do |indiv_player|
       indiv_player.reduce({}) do |new_memo, (category, characteristic)|
-        
+        if !category == :player_name
+          result[category] = characteristic
+        end
       end
       
     end
