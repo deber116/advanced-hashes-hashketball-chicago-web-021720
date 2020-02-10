@@ -184,8 +184,16 @@ def team_names
 end
 
 def player_numbers(team_name)
-  
+  result = []
+  players = get_team_info(team_name, :players)
+  players.each do |player|
+    result << player[:number]
+  end
+  result
 end
+#take the team name iterate through the players numbers and << them into an Array
+
+
 
 
 
