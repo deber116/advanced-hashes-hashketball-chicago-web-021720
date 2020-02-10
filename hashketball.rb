@@ -208,10 +208,8 @@ def player_stats(player_name)
   end
   result
 end
-#need to interate through the players into and create a new hash 
-#how do we get to that player hash when given a player name? 
-#need to go through each team --> players --> see if the name matches the argument 
-#then iterate through the players info
+
+
 
 
 
