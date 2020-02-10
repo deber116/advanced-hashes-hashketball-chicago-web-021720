@@ -262,10 +262,13 @@ def player_with_longest_name
   player_hash = game_hash
   player_hash.reduce({}) do |memo, (team,team_info)|
     team_info[:players].each do |indiv_player|
-      
+      if indiv_player[:player_name].length > name_length
+        name_length = indiv_player[:player_name].length
+        longest_player = indiv_player[:player_name]
+      end
     end
   end
-  winner
+  longest_player
 end
 
 
