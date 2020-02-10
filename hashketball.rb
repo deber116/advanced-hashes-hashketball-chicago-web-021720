@@ -216,6 +216,7 @@ def big_shoe_rebounds
   player_hash.reduce({}) do |memo, (team,team_info)|
     team_info[:players].each do |indiv_player|
       if indiv_player[:shoe] > largest_shoe
+        largest_shoe = indiv_player[:shoe]
         rebounds = indiv_player[:rebounds]
       end
       pp largest_shoe
