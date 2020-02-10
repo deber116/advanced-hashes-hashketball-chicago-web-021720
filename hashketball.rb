@@ -219,7 +219,6 @@ def big_shoe_rebounds
         largest_shoe = indiv_player[:shoe]
         rebounds = indiv_player[:rebounds]
       end
-      pp largest_shoe
     end 
   end
   rebounds
