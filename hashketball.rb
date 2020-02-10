@@ -257,17 +257,12 @@ def winning_team
 end
 
 def player_with_longest_name
-  winner = nil
-  highest_score = 0
+  longest_player = nil
+  name_length = 0
   player_hash = game_hash
   player_hash.reduce({}) do |memo, (team,team_info)|
-    score = 0
     team_info[:players].each do |indiv_player|
-      score += indiv_player[:points]
-    end 
-    if score > highest_score
-      winner = team_info[:team_name]
-      highest_score = score
+      
     end
   end
   winner
