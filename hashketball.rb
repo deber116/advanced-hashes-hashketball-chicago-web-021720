@@ -193,7 +193,16 @@ def player_numbers(team_name)
 end
 
 def player_stats(player_name)
-  
+  result = {}
+  player_hash = game_hash
+  player_hash.reduce({}) do |memo, (team,team_info)|
+    team_info[:players].each do |indiv_player|
+      if indiv_player[:player_name] == player_name
+        result = indiv_player
+      end
+    end
+  end
+  result
 end
 
 
